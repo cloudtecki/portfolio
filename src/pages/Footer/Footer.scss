@@ -1,0 +1,110 @@
+@use '@/styles/main' as *;
+
+.footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-primary);
+  padding: $spacing-xxl 0 $spacing-xl;
+  position: relative;
+
+  &__brand {
+    &-text {
+      font-family: $font-family-heading;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: $spacing-sm;
+      cursor: pointer;
+      transition: all $transition-base;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &-description {
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    gap: $spacing-lg;
+
+    @include mobile {
+      justify-content: center;
+      margin-top: $spacing-lg;
+    }
+
+    &-link {
+      @include flex-center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      border-radius: $border-radius-full;
+      text-decoration: none;
+      transition: all $transition-base;
+      border: 1px solid var(--border-primary);
+
+      &:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+        box-shadow: $shadow-md;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__divider {
+    border: none;
+    height: 1px;
+    background: var(--border-primary);
+    margin: $spacing-xl 0 $spacing-lg;
+    opacity: 0.5;
+  }
+
+  &__copyright {
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+
+    .footer__heart-icon {
+      color: var(--error);
+      animation: heartbeat 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@include mobile {
+  .footer {
+    text-align: center;
+
+    .footer-brand,
+    .footer-social {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

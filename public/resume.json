@@ -1,0 +1,430 @@
+{
+  "id": "1",
+  "summary": {
+    "roleTitle": "Full Stack Developer",
+    "email": "karthick.sprp@gmail.com",
+    "phone": "9360390426",
+    "location": "Chennai, India",
+    "address": "Chennai, India",
+    "firstName": "Karthick",
+    "lastName": "S",
+    "objective": "With over 10 years of experience in front-end development, I create exceptional digital experiences using modern technologies. I'm passionate about building scalable applications and crafting beautiful, user-friendly interfaces.",
+    "summary": "<p>With over 10+ years of experience in front-end development, I specialize in creating modern web applications using cutting-edge technologies. My journey started with a passion for problem-solving and has evolved into a career focused on delivering exceptional user experiences.</p><p>I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>"
+  },
+  "skillCategories": [
+    {
+      "title": "Frontend",
+      "skills": [
+        { "name": "React", "level": 80 },
+        { "name": "JavaScript", "level": 90 },
+        { "name": "React-Native", "level": 30 },
+        { "name": "TypeScript", "level": 80 },
+        { "name": "Redux", "level": 85 },
+        { "name": "Redux-Toolkit", "level": 80 },
+        { "name": "RTK Query", "level": 80 },
+        { "name": "HTML5", "level": 90 },
+        { "name": "CSS", "level": 85 },
+        { "name": "SASS", "level": 90 }
+      ]
+    },
+    {
+      "title": "Backend",
+      "skills": [
+        { "name": "Node.js", "level": 30 },
+        { "name": "Express", "level": 30 },
+        { "name": "MongoDB", "level": 30 },
+        { "name": "MySQL", "level": 70 }
+      ]
+    },
+    {
+      "title": "Tools & Others",
+      "skills": [
+        { "name": "Git", "level": 90 },
+        { "name": "Jest", "level": 80 },
+        { "name": "Jira", "level": 80 },
+        { "name": "Postman", "level": 30 },
+        { "name": "Visual Studio Code", "level": 85 },
+        { "name": "Android Studio", "level": 40 }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "isFeatured": false,
+      "title": "GLOBAL ENGAGEMENT MANAGEMENT (GEM)",
+      "description": "GEM Solution aims to enhance our ability to develop competitive pursuits and deliver engagements efficiently, ensuring alignment with business objectives. By leveraging this solution, we will improve collaboration, optimize resource allocation, and streamline engagement management across global teams.",
+      "startDate": "01-03-2025",
+      "endDate": "30-06-2025",
+      "teamSize": 50,
+      "image": "https://img.freepik.com/free-photo/network-concept-ai-generated-image_268835-5717.jpg?semt=ais_hybrid&w=740",
+      "role": "Senior Frontend Developer",
+      "domain": "Global Compliance",
+      "responsibilities": [
+        "Develop and maintain responsive React.js components for GEM’s user interface.",
+        "Ensure cross-browser compatibility and a seamless user experience.",
+        "Optimize front-end performance for smooth and efficient data rendering.",
+        "Implement dynamic dashboards, reports, and engagement tracking modules."
+      ],
+      "tools": ["Figma", "Jira"],
+      "technologies": [
+        "React",
+        "Redux",
+        "RTK Query",
+        "Saga",
+        "Java Script",
+        "CSS",
+        "HTML",
+        "SASS",
+        "JEST",
+        "React Testing Library",
+        ".Net Core",
+        "Swagger",
+        "Azure DevOps",
+        "Git",
+        "TypeScript",
+        "Formik"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "id": "p2",
+      "isFeatured": false,
+      "title": "THE REGULATORY & COMPLIANCE MANAGER (RCM)",
+      "description": "The Regulatory & Compliance Manager (RCM), a global product, enables EY  consultants and their clients to digitally manage compliance within a shifting regulatory landscape, identifying what needs to be complied with how to get compliant and how to monitor compliance. With a compliance library enriched with EY guidance, customizable workflow and Artificial Intelligence, causality and impact are more easily understood, regulatory tracking and monitoring is simplified, and the creation of a compliance program is accelerated. R&CM supports the development of tooling to enable the creation of a library of regulations, clauses, obligations and supporting documents, distinguishing between an EY Candidate Library and client specific libraries",
+      "startDate": "01-02-2022",
+      "endDate": "30-03-2025",
+      "teamSize": 50,
+      "image": "https://formiti.com/wp-content/uploads/2023/10/Global-Data-Regulations.webp",
+      "role": "Senior Frontend Developer",
+      "domain": "Global Compliance",
+      "responsibilities": [
+        "Understanding the requirements, going through stories and acceptance criteria",
+        "Based on understanding provide the estimation of the task assigned.",
+        "Creating UI Component and functionality codes using React JS",
+        "Manipulated State management with Redux, RTK Query and Saga",
+        "Writing Unit Test Cases using RTL and JEST",
+        "Responsible for Peer Code review",
+        "Attending daily scrum calls and updating the status."
+      ],
+      "tools": ["Figma", "Jira"],
+      "technologies": [
+        "React",
+        "Redux",
+        "RTK Query",
+        "Saga",
+        "Git",
+        "Java Script",
+        "CSS",
+        "HTML",
+        "SASS",
+        "JEST",
+        "React Testing Library",
+        ".Net Core",
+        "Swagger",
+        "Azure DevOps",
+        "TypeScript",
+        "Formik"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "id": "p3",
+      "isFeatured": false,
+      "title": "CONDENAST (MONTROSE)",
+      "description": "Conde Nast is a Conde Nast Technology created Montrose, also known as the  Digital Archive, to give clients access to a repository of CondeNast editorial content, or assets, including articles, images, videos, and audio selections",
+      "startDate": "15-07-2021",
+      "endDate": "30-12-2021",
+      "teamSize": 15,
+      "image": "https://strapi-bus-eng-prod.s3.amazonaws.com/Aya_Nakamura_Vogue_France_5d07d03058_3937ca1b65.jpeg",
+      "role": "Senior Frontend Developer",
+      "domain": "Global Compliance",
+      "responsibilities": [
+        "Responsible for building Webpage and creating re-usable component using React JS, bug fixing and application enhancement",
+        "Analysis, Code Implementation",
+        "Accomplishing functionalities and involved in bug fixes"
+      ],
+      "tools": ["Figma", "Jira", "Visual Studio Code"],
+      "technologies": [
+        "ReactJS",
+        "Redux Toolkit",
+        "Saga",
+        "Git",
+        "Java Script",
+        "CSS",
+        "HTML",
+        "SASS",
+        "JEST",
+        "React Testing Library",
+        ".Net Core",
+        "Swagger",
+        "Azure DevOps"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "id": "p4",
+      "isFeatured": false,
+      "title": "SMARTHINKING",
+      "description": "Smarthinking is an online application which allows student and tutor to create a virtual classroom effect where student can perform a lot of activities like submitting any question based on the discipline and subject chosen. Also, students can submit essays or paragraphs and get them reviewed offline, take assessments, and do writing practice. Using the whiteboard platform, students can create multiple equations and get them solved by tutors live. In simple words, Smarthinking allows a student to connect with any tutor across the globe and quest their thirst for knowledge. Maximized applications’ efficiency, data quality, scope, operability, and flexibility. Managed, optimized, and updated PHP databases as necessary. Developed app integration with REST and other APIs for whiteboard, social media logins, payment processors, and other services. Maximized productivity by keeping detailed records of daily progress.",
+      "startDate": "01-08-2019",
+      "endDate": "12-07-2021",
+      "teamSize": 25,
+      "image": "https://t4.ftcdn.net/jpg/13/30/23/75/360_F_1330237544_OtunhzcDFnQxnf2Tbq1Uf8hZiYDlwPj8.jpg",
+      "role": "Frontend Developer",
+      "domain": "Education",
+      "responsibilities": [
+        "Analysis, Code Implementation, Coverage.",
+        "Understanding and implementing of project management practices with Technical Upgrade PHP towards React.",
+        "Closely working with the Team with technical architecture of projects, which includes high priority tasks.",
+        "Accomplishing functionalities & test cases. Involved in bug fixes & WB related activities."
+      ],
+      "tools": ["Figma", "Jira", "Visual Studio Code"],
+      "technologies": [
+        "ReactJS",
+        "Redux",
+        "Java Script",
+        "CSS",
+        "HTML",
+        "SASS",
+        "JEST",
+        "React Testing Library",
+        "Node.js",
+        "Swagger",
+        "Azure DevOps"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "id": "p5",
+      "isFeatured": false,
+      "title": "IMPACT MARKETING",
+      "description": "Deluxe Branded Marketing is your indispensable partner for real estate marketing. Our primary focus is to help our customers distribute the right message to the right audience, through the right media, and at the right time to get leads, close listings, and keep clients for life",
+      "startDate": "01-02-2019",
+      "endDate": "30-07-2019",
+      "teamSize": 5,
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/005/732/506/small_2x/man-hand-holding-smart-phone-digital-marketing-word-with-icon-business-virtual-screen-free-photo.jpg",
+      "role": "Frontend Developer",
+      "domain": "Marketing",
+      "responsibilities": [
+        "Developed Modules using Angular 4, React js and Bootstrap",
+        "Analyze business requirements and design specifications.",
+        "Responsive web development",
+        "Developed reusable components using ReactJS and Redux."
+      ],
+      "tools": ["Figma", "Jira", "Visual Studio Code"],
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "ReactJS",
+        "Redux",
+        "Java Script",
+        "CSS",
+        "HTML",
+        "SASS",
+        "Swagger",
+        "Azure DevOps"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "id": "p6",
+      "isFeatured": false,
+      "title": "GigaMe",
+      "description": "GigaMe - Is a web application based on Bay Area, USA and it used for Post New Jobs, Job Search and recruiting new resources for the posted jobs. It has been developed based on SpringMVC methodology. This system helps registered employer to easily post their new jobs and engaged with popular recruiters in bay area. It also helps registered recruiter to engaged with employers and submit their candidates for matched jobs of engaged employers.",
+      "startDate": "01-08-2015",
+      "endDate": "30-01-2019",
+      "teamSize": 12,
+      "image": "https://media.istockphoto.com/id/1279104620/photo/top-view-of-a-white-desktop-concept-job-search.jpg?s=612x612&w=0&k=20&c=Ow_kvA2wQ4rLlqX_oFHgpjLb1JMKyPQKLOPzbu6w6qw=",
+      "role": "Junior Frontend Developer",
+      "domain": "Job Portal &Recruitment",
+      "responsibilities": [
+        "Designed UI Layouts using Bootstrap",
+        "Analyze business requirements and design specifications.",
+        "Excellent Coordination in project activities and ensure that all project phases are followed and documented properly.",
+        "Worked in Agile Methodology."
+      ],
+      "tools": ["Figma", "Jira", "Visual Studio Code"],
+      "technologies": [
+        "ReactJS",
+        "Redux",
+        "Java Script",
+        "JQuery",
+        "CSS",
+        "HTML",
+        "SASS",
+        "Swagger",
+        "Azure DevOps"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "id": "p7",
+      "isFeatured": true,
+      "title": "E-commerce Platform",
+      "description": "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product catalog, shopping cart, and admin dashboard.",
+      "startDate": "2022-01-01",
+      "endDate": "2022-06-30",
+      "teamSize": 1,
+      "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "role": "Frontend Lead",
+      "domain": "Retail",
+      "tools": ["Figma", "Jira"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JEST",
+        "React Testing Library",
+        "Redux Toolkit",
+        "Java Script",
+        "SASS",
+        "HTML5",
+        "Redux",
+        "RTK Query",
+        "Node.js",
+        "Express JS",
+        "MongoDB"
+      ],
+      "github": "https://github.com",
+      "demo": "https://demo.com"
+    },
+    {
+      "id": "p8",
+      "isFeatured": true,
+      "title": "Weather App",
+      "description": "Full-stack weather application with React, Node.js, and OpenWeatherMap API integration. Features include user authentication, weather dashboard, and location-based forecasts.",
+      "startDate": "2022-01-01",
+      "endDate": "2022-06-30",
+      "teamSize": 1,
+      "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "role": "Frontend Lead",
+      "domain": "Weather",
+      "tools": ["Figma", "Jira"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JEST",
+        "React Testing Library",
+        "Redux Toolkit",
+        "Java Script",
+        "SASS",
+        "HTML5",
+        "Redux",
+        "RTK Query",
+        "Node.js",
+        "Express JS",
+        "MongoDB"
+      ],
+      "github": "https://github.com",
+      "demo": "https://demo.com"
+    },
+    {
+      "id": "p9",
+      "isFeatured": true,
+      "title": "Civil Admin Portal",
+      "description": "A web-based application designed to streamline civil project operations by managing vendors, handling purchases, and tracking orders. The portal enables users to create and manage vendor profiles, initiate purchase requests, place orders, and monitor their progress through each stage—ensuring organized procurement and improved workflow visibility.\n\nCreate and manage vendor records with essential details\n\nRaise and track purchase requests for materials and services\n\nPlace and follow orders from initiation to delivery\n\nMaintain organized order history and vendor communications.",
+      "startDate": "2022-01-01",
+      "endDate": "2022-06-30",
+      "teamSize": 1,
+      "image": "https://magicinc.org/wp-content/uploads/2021/12/Infrastructure-and-Civil-Engineering-1000x500.jpeg",
+      "role": "Frontend Lead",
+      "domain": "Infrastructure Management",
+      "tools": ["Figma", "Jira"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JEST",
+        "React Testing Library",
+        "Redux Toolkit",
+        "Java Script",
+        "SASS",
+        "HTML5",
+        "Redux",
+        "RTK Query",
+        "Node.js",
+        "Express JS",
+        "MongoDB"
+      ],
+      "github": "https://github.com",
+      "demo": "https://demo.com"
+    }
+  ],
+  "experience": [
+    {
+      "id": "e1",
+      "jobTitle": "Front-End Developer",
+      "company": "LTIMindtree",
+      "designation": "Senior Software Engineer",
+      "location": "Chennai, India",
+      "startDate": "13-07-2021",
+      "endDate": "Present",
+      "responsibilities": "Contributed to team collaboration through code reviews and active participation in daily scrum meetings, helping maintain code quality and project momentum.",
+      "achievements": [
+        "Improved app state handling using RTK Query",
+        "Optimized performance by implementing lazy loading and code splitting",
+        "Enhanced user experience by integrating responsive design principles"
+      ]
+    },
+    {
+      "id": "e2",
+      "jobTitle": "Front-End Developer",
+      "company": "CTS",
+      "designation": "Associate-Project",
+      "location": "Chennai, India",
+      "startDate": "05-08-2019",
+      "endDate": "12-07-2021",
+      "responsibilities": "Focused on delivering functionality with quality through unit tests, bug fixes, and workflow board (WB) activities, ensuring smooth and maintainable releases.",
+      "achievements": [
+        "Migrated legacy PHP modules to modern React components",
+        "Delivered features with thorough test coverage and quick bug resolution",
+        "Contributed to technical architecture and sprint planning discussions"
+      ]
+    },
+    {
+      "id": "e3",
+      "jobTitle": "Front-End Developer",
+      "company": "Congruent Global",
+      "designation": "Software Engineer",
+      "location": "Chennai, India",
+      "startDate": "23-01-2019",
+      "endDate": "02-08-2019",
+      "responsibilities": "Focused on clean UI implementation, performance optimization, and consistent design across browsers and devices.",
+      "achievements": [
+        "Built dynamic, responsive interfaces using React.js and Bootstrap",
+        "Translated business requirements into functional, maintainable code",
+        "Collaborated with backend teams to integrate RESTful APIs"
+      ]
+    },
+    {
+      "id": "e4",
+      "jobTitle": "Front-End Developer",
+      "company": "GigaMe",
+      "designation": "UI Developer",
+      "location": "Chennai, India",
+      "startDate": "01-03-2015",
+      "endDate": "20-01-2019",
+      "responsibilities": "Maintained detailed documentation and followed project phases diligently, demonstrating strong coordination and communication throughout the development lifecycle.",
+      "achievements": [
+        "Created modern, responsive interfaces with Bootstrap and React Bootstrap",
+        "Translated business requirements into intuitive, scalable UI designs",
+        "Collaborated in Agile teams, ensuring timely delivery and proper documentation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "ed1",
+      "degree": "B.E",
+      "institution": "Anna University",
+      "fieldOfStudy": "Computer Science",
+      "startDate": "2009-06-01",
+      "endDate": "2013-05-31"
+    }
+  ]
+}

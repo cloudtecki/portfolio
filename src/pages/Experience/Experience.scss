@@ -1,0 +1,278 @@
+@use '@/styles/main' as *;
+
+.experience {
+  background: var(--bg-secondary);
+  position: relative;
+
+  &__section {
+    margin-bottom: $spacing-xxl;
+    text-align: center;
+
+    &--title {
+      font-family: $font-family-heading;
+      font-size: $font-size-4xl;
+      font-weight: $font-weight-bold;
+      color: var(--text-primary);
+      margin-bottom: $spacing-md;
+
+      @include mobile {
+        font-size: $font-size-3xl;
+      }
+    }
+
+    &--subtitle {
+      font-size: $font-size-lg;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+
+      @include mobile {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  &__timeline {
+    position: relative;
+    padding: $spacing-xl 0;
+
+    // Central line
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      transform: translateX(-50%);
+      border-radius: $border-radius-full;
+
+      @include mobile {
+        left: 2rem;
+      }
+    }
+
+    &-item {
+      position: relative;
+      margin-bottom: $spacing-xxl;
+      width: 50%;
+
+      &--left {
+        left: 0;
+        padding-right: $spacing-xl;
+
+        .experience__timeline-content {
+          text-align: right;
+        }
+
+        .experience__timeline-marker {
+          right: -$spacing-lg;
+        }
+
+        @include mobile {
+          width: 100%;
+          left: 0;
+          padding-right: 0;
+          padding-left: 4rem;
+
+          .experience__timeline-content {
+            text-align: left;
+          }
+
+          .experience__timeline-marker {
+            left: 1rem;
+            right: auto;
+          }
+        }
+      }
+
+      &--right {
+        left: 50%;
+        padding-left: $spacing-xl;
+
+        .experience__timeline-marker {
+          left: -$spacing-lg;
+        }
+
+        @include mobile {
+          width: 100%;
+          left: 0;
+          padding-left: 4rem;
+
+          .experience__timeline-marker {
+            left: 1rem;
+          }
+        }
+      }
+
+      .experience__timeline-content {
+        @include card-base;
+        padding: $spacing-xl;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 2rem;
+          width: 0;
+          height: 0;
+          border: 1rem solid transparent;
+        }
+
+        .experience__timeline-header {
+          margin-bottom: $spacing-lg;
+
+          .experience__timeline-title {
+            font-family: $font-family-heading;
+            font-size: $font-size-xl;
+            font-weight: $font-weight-semibold;
+            color: var(--text-primary);
+            margin-bottom: $spacing-xs;
+          }
+
+          .experience__timeline-company {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-medium;
+            color: var(--primary);
+            margin-bottom: $spacing-md;
+          }
+
+          .experience__timeline-meta {
+            display: flex;
+            gap: $spacing-lg;
+            font-size: $font-size-sm;
+            color: var(--text-secondary);
+
+            @include mobile {
+              flex-direction: column;
+              gap: $spacing-xs;
+            }
+
+            .experience__timeline-period,
+            .experience__timeline-location {
+              display: flex;
+              align-items: center;
+              gap: $spacing-xs;
+            }
+          }
+        }
+
+        .experience__timeline-description {
+          font-size: $font-size-base;
+          color: var(--text-secondary);
+          line-height: 1.7;
+          margin-bottom: $spacing-lg;
+        }
+
+        .experience__timeline-achievements {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            position: relative;
+            padding-left: $spacing-lg;
+            margin-bottom: $spacing-sm;
+            font-size: $font-size-sm;
+            color: var(--text-secondary);
+
+            &::before {
+              content: '✓';
+              position: absolute;
+              left: 0;
+              color: var(--success);
+              font-weight: $font-weight-bold;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      &--left .experience__timeline-content::before {
+        right: -2rem;
+        border-left-color: var(--bg-primary);
+
+        @include mobile {
+          left: -2rem;
+          right: auto;
+          border-right-color: var(--bg-primary);
+          border-left-color: transparent;
+        }
+      }
+
+      &--right .experience__timeline-content::before {
+        left: -2rem;
+        border-right-color: var(--bg-primary);
+
+        @include mobile {
+          left: -2rem;
+          border-right-color: var(--bg-primary);
+        }
+      }
+
+      .experience__timeline-marker {
+        position: absolute;
+        top: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: var(--primary);
+        border-radius: 50%;
+        border: 4px solid var(--bg-primary);
+        z-index: 2;
+        animation: pulse 2s infinite;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 0.5rem;
+          height: 0.5rem;
+          background: var(--bg-primary);
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:hover {
+        .experience__timeline-content {
+          transform: translateY(-5px);
+          box-shadow: $shadow-xl;
+        }
+
+        .experience__timeline-marker {
+          transform: scale(1.2);
+          background: var(--secondary);
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+@include mobile {
+  .experience {
+    &__timeline {
+      padding-left: 0;
+
+      &-item {
+        margin-bottom: $spacing-xl;
+      }
+    }
+  }
+}

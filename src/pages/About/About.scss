@@ -1,0 +1,144 @@
+@use '@/styles/main' as *;
+
+.about {
+  background: var(--bg-secondary);
+  position: relative;
+
+  .section-header {
+    margin-bottom: $spacing-xxl;
+
+    .section-title {
+      font-family: $font-family-heading;
+      font-size: $font-size-4xl;
+      font-weight: $font-weight-bold;
+      color: var(--text-primary);
+      margin-bottom: $spacing-md;
+
+      @include mobile {
+        font-size: $font-size-3xl;
+      }
+    }
+
+    .section-subtitle {
+      font-size: $font-size-lg;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+
+      @include mobile {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  &__content {
+    &-title {
+      font-family: $font-family-heading;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-semibold;
+      color: var(--text-primary);
+      margin-bottom: $spacing-lg;
+
+      @include mobile {
+        font-size: $font-size-xl;
+      }
+    }
+
+    &-text {
+      font-size: $font-size-base;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: $spacing-lg;
+    }
+
+    &-stats {
+      display: flex;
+      gap: $spacing-xl;
+      margin-top: $spacing-xl;
+
+      @include mobile {
+        gap: $spacing-lg;
+      }
+
+      .stat-item {
+        text-align: center;
+
+        h4 {
+          font-family: $font-family-heading;
+          font-size: $font-size-3xl;
+          font-weight: $font-weight-bold;
+          color: var(--primary);
+          margin-bottom: $spacing-xs;
+
+          @include mobile {
+            font-size: $font-size-2xl;
+          }
+        }
+
+        span {
+          font-size: $font-size-sm;
+          color: var(--text-secondary);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+
+          @include mobile {
+            font-size: $font-size-xs;
+          }
+        }
+      }
+    }
+  }
+
+  &__feature-card {
+    @include card-base;
+    height: 100%;
+    text-align: center;
+    padding: $spacing-xl;
+    transition: all $transition-base;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: $shadow-xl;
+
+      .about__feature-card__icon {
+        transform: scale(1.1);
+        color: var(--primary);
+      }
+    }
+
+    &__icon {
+      @include flex-center;
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto $spacing-lg;
+      border-radius: $border-radius-full;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      transition: all $transition-base;
+    }
+
+    &__title {
+      font-family: $font-family-heading;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-semibold;
+      color: var(--text-primary);
+      margin-bottom: $spacing-md;
+    }
+
+    &__description {
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+@include mobile {
+  .about {
+    &__content &__content-stats {
+      justify-content: space-around;
+      text-align: center;
+    }
+  }
+}

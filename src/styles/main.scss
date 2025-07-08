@@ -1,0 +1,238 @@
+@forward 'colors';
+@forward 'variables';
+@forward 'mixins';
+
+@use 'colors' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+// Bootstrap imports
+@import 'bootstrap/scss/bootstrap';
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: all $transition-base;
+  overflow-x: hidden;
+}
+
+// Theme variables
+:root {
+  // Light theme (default)
+  --primary: #{get-color(primary)};
+  --primary-light: #{get-color(primary-light)};
+  --primary-dark: #{get-color(primary-dark)};
+  --secondary: #{get-color(secondary)};
+  --secondary-light: #{get-color(secondary-light)};
+  --secondary-dark: #{get-color(secondary-dark)};
+  --accent: #{get-color(accent)};
+  --accent-light: #{get-color(accent-light)};
+  --accent-dark: #{get-color(accent-dark)};
+  --success: #{get-color(success)};
+  --warning: #{get-color(warning)};
+  --error: #{get-color(error)};
+  --text-primary: #{get-color(text-primary)};
+  --text-secondary: #{get-color(text-secondary)};
+  --text-muted: #{get-color(text-muted)};
+  --bg-primary: #{get-color(bg-primary)};
+  --bg-secondary: #{get-color(bg-secondary)};
+  --bg-muted: #{get-color(bg-muted)};
+  --border-primary: #{get-color(border-primary)};
+  --border-secondary: #{get-color(border-secondary)};
+}
+
+// Dark theme
+[data-theme='dark'] {
+  --primary: #{get-color(primary, 'dark')};
+  --primary-light: #{get-color(primary-light, 'dark')};
+  --primary-dark: #{get-color(primary-dark, 'dark')};
+  --secondary: #{get-color(secondary, 'dark')};
+  --secondary-light: #{get-color(secondary-light, 'dark')};
+  --secondary-dark: #{get-color(secondary-dark, 'dark')};
+  --accent: #{get-color(accent, 'dark')};
+  --accent-light: #{get-color(accent-light, 'dark')};
+  --accent-dark: #{get-color(accent-dark, 'dark')};
+  --success: #{get-color(success, 'dark')};
+  --warning: #{get-color(warning, 'dark')};
+  --error: #{get-color(error, 'dark')};
+  --text-primary: #{get-color(text-primary, 'dark')};
+  --text-secondary: #{get-color(text-secondary, 'dark')};
+  --text-muted: #{get-color(text-muted, 'dark')};
+  --bg-primary: #{get-color(bg-primary, 'dark')};
+  --bg-secondary: #{get-color(bg-secondary, 'dark')};
+  --bg-muted: #{get-color(bg-muted, 'dark')};
+  --border-primary: #{get-color(border-primary, 'dark')};
+  --border-secondary: #{get-color(border-secondary, 'dark')};
+}
+
+// Utility classes
+.text-gradient {
+  @include text-gradient(var(--primary), var(--secondary));
+}
+
+.section-padding {
+  padding: $spacing-xxl 0;
+
+  @include mobile {
+    padding: $spacing-xl 0;
+  }
+}
+
+// Animations
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.8s ease-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-zoom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease-out;
+
+  &.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-2rem);
+  transition: all 0.8s ease-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: all 0.8s ease-out;
+
+  &.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Theme toggle
+.theme-toggle {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: $z-fixed;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: $border-radius-full;
+  width: 3.5rem;
+  height: 3.5rem;
+  @include flex-center;
+  box-shadow: $shadow-lg;
+  transition: all $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: $shadow-xl;
+  }
+
+  @include mobile {
+    left: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: $border-radius-full;
+
+  &:hover {
+    background: var(--primary-dark);
+  }
+}
+
+// Selection styling
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+// Focus styles
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+// Floating Buttons
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: $z-fixed;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border: none;
+  border-radius: $border-radius-full;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: $shadow-lg;
+  transition: all $transition-base;
+  @include flex-center;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: $shadow-xl;
+  }
+
+  &.pdf-btn {
+    right: 8rem;
+  }
+
+  @include mobile {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+
+    &.pdf-btn {
+      right: 4rem;
+    }
+  }
+}

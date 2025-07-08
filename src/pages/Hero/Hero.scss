@@ -1,0 +1,233 @@
+@use '@/styles/main' as *;
+
+.hero {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
+  overflow: hidden;
+
+  &__content {
+    z-index: 2;
+    position: relative;
+
+    &-title {
+      font-family: $font-family-heading;
+      font-size: $font-size-5xl;
+      font-weight: $font-weight-bold;
+      line-height: 1.2;
+      margin-bottom: $spacing-md;
+      color: var(--text-primary);
+
+      @include tablet {
+        font-size: $font-size-4xl;
+      }
+
+      @include mobile {
+        font-size: $font-size-3xl;
+      }
+    }
+
+    &-subtitle {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-semibold;
+      color: var(--text-secondary);
+      margin-bottom: $spacing-lg;
+
+      @include mobile {
+        font-size: $font-size-xl;
+      }
+    }
+
+    &-description {
+      font-size: $font-size-lg;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: $spacing-xl;
+      max-width: 500px;
+
+      @include mobile {
+        font-size: $font-size-base;
+      }
+    }
+
+    &-buttons {
+      margin-bottom: $spacing-xl;
+
+      .btn-primary-custom {
+        @include button-primary;
+        padding: $spacing-md $spacing-xl;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        border-radius: $border-radius-lg;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: $shadow-xl;
+        }
+      }
+
+      .btn-secondary-custom {
+        @include button-secondary;
+        padding: $spacing-md $spacing-xl;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        border-radius: $border-radius-lg;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: $shadow-xl;
+        }
+      }
+    }
+
+    &-social {
+      display: flex;
+      gap: $spacing-lg;
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: $border-radius-full;
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all $transition-base;
+        border: 1px solid var(--border-primary);
+
+        &:hover {
+          background: var(--primary);
+          color: white;
+          transform: translateY(-3px) scale(1.1);
+          box-shadow: $shadow-lg;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include flex-center;
+    position: relative;
+
+    &-container {
+      position: relative;
+      max-width: 450px;
+      width: 100%;
+
+      // Floating elements around image
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(45deg, var(--accent), var(--primary));
+        opacity: 0.1;
+        z-index: -1;
+      }
+
+      &::before {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        left: -50px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      &::after {
+        width: 150px;
+        height: 150px;
+        bottom: -30px;
+        right: -30px;
+        animation: float 8s ease-in-out infinite reverse;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    border-radius: $border-radius-xl;
+    overflow: hidden;
+    box-shadow: $shadow-xl;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    padding: 4px;
+
+    .profile-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+      transition: transform $transition-slow;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @include mobile {
+        height: 300px;
+      }
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      opacity: 0.1;
+      transition: opacity $transition-base;
+    }
+
+    &:hover .image-overlay {
+      opacity: 0.2;
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: $spacing-xl;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex-column-center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all $transition-base;
+
+    &:hover {
+      color: var(--primary);
+      transform: translateX(-50%) translateY(-5px);
+    }
+
+    span {
+      font-size: $font-size-sm;
+      margin-top: $spacing-sm;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @include mobile {
+      bottom: $spacing-lg;
+    }
+  }
+}
+
+@include mobile {
+  .hero {
+    margin-top: 6rem;
+
+    &__content {
+      text-align: center;
+      margin-bottom: $spacing-xl;
+    }
+
+    &__image {
+      order: -1;
+      margin-bottom: $spacing-xl;
+    }
+  }
+}

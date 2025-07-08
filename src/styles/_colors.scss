@@ -1,0 +1,164 @@
+// Light Theme Colors
+$light-colors: (
+  // Primary palette
+  primary: #3B82F6,
+  primary-light: #60A5FA,
+  primary-dark: #1D4ED8,
+  primary-50: #EFF6FF,
+  primary-100: #DBEAFE,
+  primary-500: #3B82F6,
+  primary-600: #2563EB,
+  primary-700: #1D4ED8,
+  primary-800: #1E40AF,
+  primary-900: #1E3A8A,
+
+  // Secondary palette
+  secondary: #14B8A6,
+  secondary-light: #5EEAD4,
+  secondary-dark: #0F766E,
+  secondary-50: #F0FDFA,
+  secondary-100: #CCFBF1,
+  secondary-500: #14B8A6,
+  secondary-600: #0D9488,
+  secondary-700: #0F766E,
+  secondary-800: #115E59,
+  secondary-900: #134E4A,
+
+  // Accent palette
+  accent: #F59E0B,
+  accent-light: #FCD34D,
+  accent-dark: #D97706,
+  accent-50: #FFFBEB,
+  accent-100: #FEF3C7,
+  accent-500: #F59E0B,
+  accent-600: #D97706,
+  accent-700: #B45309,
+  accent-800: #92400E,
+  accent-900: #78350F,
+
+  // Status colors
+  success: #10B981,
+  success-light: #6EE7B7,
+  success-dark: #047857,
+  warning: #F59E0B,
+  warning-light: #FCD34D,
+  warning-dark: #D97706,
+  error: #EF4444,
+  error-light: #FCA5A5,
+  error-dark: #DC2626,
+
+  // Neutral colors
+  white: #FFFFFF,
+  gray-50: #F9FAFB,
+  gray-100: #F3F4F6,
+  gray-200: #E5E7EB,
+  gray-300: #D1D5DB,
+  gray-400: #9CA3AF,
+  gray-500: #6B7280,
+  gray-600: #4B5563,
+  gray-700: #374151,
+  gray-800: #1F2937,
+  gray-900: #111827,
+  black: #000000,
+
+  // Text colors
+  text-primary: #111827,
+  text-secondary: #6B7280,
+  text-muted: #9CA3AF,
+
+  // Background colors
+  bg-primary: #FFFFFF,
+  bg-secondary: #F9FAFB,
+  bg-muted: #F3F4F6,
+
+  // Border colors
+  border-primary: #E5E7EB,
+  border-secondary: #D1D5DB
+);
+
+// Dark Theme Colors
+$dark-colors: (
+  // Primary palette
+  primary: #60A5FA,
+  primary-light: #93C5FD,
+  primary-dark: #3B82F6,
+  primary-50: #1E3A8A,
+  primary-100: #1E40AF,
+  primary-500: #60A5FA,
+  primary-600: #3B82F6,
+  primary-700: #2563EB,
+  primary-800: #1D4ED8,
+  primary-900: #1E40AF,
+
+  // Secondary palette
+  secondary: #5EEAD4,
+  secondary-light: #99F6E4,
+  secondary-dark: #14B8A6,
+  secondary-50: #134E4A,
+  secondary-100: #115E59,
+  secondary-500: #5EEAD4,
+  secondary-600: #2DD4BF,
+  secondary-700: #14B8A6,
+  secondary-800: #0F766E,
+  secondary-900: #0D9488,
+
+  // Accent palette
+  accent: #FCD34D,
+  accent-light: #FDE68A,
+  accent-dark: #F59E0B,
+  accent-50: #78350F,
+  accent-100: #92400E,
+  accent-500: #FCD34D,
+  accent-600: #FBBF24,
+  accent-700: #F59E0B,
+  accent-800: #D97706,
+  accent-900: #B45309,
+
+  // Status colors
+  success: #6EE7B7,
+  success-light: #A7F3D0,
+  success-dark: #10B981,
+  warning: #FCD34D,
+  warning-light: #FDE68A,
+  warning-dark: #F59E0B,
+  error: #FCA5A5,
+  error-light: #FED7D7,
+  error-dark: #EF4444,
+
+  // Neutral colors
+  white: #111827,
+  gray-50: #1F2937,
+  gray-100: #374151,
+  gray-200: #4B5563,
+  gray-300: #6B7280,
+  gray-400: #9CA3AF,
+  gray-500: #D1D5DB,
+  gray-600: #E5E7EB,
+  gray-700: #F3F4F6,
+  gray-800: #F9FAFB,
+  gray-900: #FFFFFF,
+  black: #FFFFFF,
+
+  // Text colors
+  text-primary: #F9FAFB,
+  text-secondary: #D1D5DB,
+  text-muted: #9CA3AF,
+
+  // Background colors
+  bg-primary: #111827,
+  bg-secondary: #1F2937,
+  bg-muted: #374151,
+
+  // Border colors
+  border-primary: #374151,
+  border-secondary: #4B5563
+);
+
+// Function to get color value
+@function get-color($key, $theme: 'light') {
+  @if $theme == 'light' {
+    @return map-get($light-colors, $key);
+  } @else {
+    @return map-get($dark-colors, $key);
+  }
+}

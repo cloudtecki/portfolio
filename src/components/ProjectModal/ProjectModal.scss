@@ -1,0 +1,53 @@
+@use '@/styles/main' as *;
+
+.portfolio-modal {
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+
+    .tech-tag {
+      padding: $spacing-xs $spacing-sm;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      font-size: $font-size-xs;
+      font-weight: $font-weight-medium;
+      border-radius: $border-radius-md;
+      border: 1px solid var(--border-primary);
+      transition: all $transition-base;
+
+      &:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .project-responsibilities {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      padding-left: $spacing-lg;
+      margin-bottom: $spacing-sm;
+      font-size: $font-size-sm;
+      // color: var(--text-secondary);
+
+      &::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--success);
+        font-weight: $font-weight-bold;
+      }
+
+      &:last-child {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
