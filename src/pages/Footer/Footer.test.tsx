@@ -40,7 +40,10 @@ describe('Footer component test case', () => {
       'href',
       'https://www.linkedin.com/in/karthick-s-8732b379'
     );
-    expect(mailLink).toHaveAttribute('href', 'mailto:john@example.com');
+    expect(mailLink).toHaveAttribute(
+      'href',
+      'mailto:karthick.sprp18@gmail.com'
+    );
 
     expect(screen.getByTestId('github-icon')).toBeInTheDocument();
     expect(screen.getByTestId('linkedin-icon')).toBeInTheDocument();
