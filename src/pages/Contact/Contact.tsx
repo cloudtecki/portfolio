@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
               <Form onSubmit={handleSubmit} className='contact-form'>
                 <Row>
                   <Col md={6}>
-                    <Form.Group className='mb-4'>
+                    <Form.Group className='mb-4' controlId='formName'>
                       <Form.Label>Name</Form.Label>
                       <Form.Control
                         type='text'
@@ -123,11 +123,12 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         className='form-control-custom'
+                        placeholder='Name'
                       />
                     </Form.Group>
                   </Col>
                   <Col md={6}>
-                    <Form.Group className='mb-4'>
+                    <Form.Group className='mb-4' controlId='formEmail'>
                       <Form.Label>Email</Form.Label>
                       <Form.Control
                         type='email'
@@ -140,7 +141,7 @@ const Contact: React.FC = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Form.Group className='mb-4'>
+                <Form.Group className='mb-4' controlId='formSubject'>
                   <Form.Label>Subject</Form.Label>
                   <Form.Control
                     type='text'
@@ -149,9 +150,10 @@ const Contact: React.FC = () => {
                     onChange={handleChange}
                     required
                     className='form-control-custom'
+                    placeholder='Subject of your message'
                   />
                 </Form.Group>
-                <Form.Group className='mb-4'>
+                <Form.Group className='mb-4' controlId='formMessage'>
                   <Form.Label>Message</Form.Label>
                   <Form.Control
                     as='textarea'

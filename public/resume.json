@@ -9,7 +9,10 @@
     "firstName": "Karthick",
     "lastName": "S",
     "objective": "With over 10 years of experience in front-end development, I create exceptional digital experiences using modern technologies. I'm passionate about building scalable applications and crafting beautiful, user-friendly interfaces.",
-    "summary": "<p>With over 10+ years of experience in front-end development, I specialize in creating modern web applications using cutting-edge technologies. My journey started with a passion for problem-solving and has evolved into a career focused on delivering exceptional user experiences.</p><p>I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>"
+    "summary": "<p>With over 10+ years of experience in front-end development, I specialize in creating modern web applications using cutting-edge technologies. My journey started with a passion for problem-solving and has evolved into a career focused on delivering exceptional user experiences.</p><p>I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>",
+    "projectCompleted": "5+",
+    "experience": "10+",
+    "happyClients": "10+"
   },
   "skillCategories": [
     {

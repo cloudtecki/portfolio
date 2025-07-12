@@ -31,6 +31,7 @@ function App() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   useEffect(() => {
     // Set initial theme
     const savedTheme = localStorage.getItem('theme');
@@ -41,17 +42,6 @@ function App() {
 
     document.documentElement.setAttribute('data-theme', theme);
   }, []);
-
-  // const [
-  //   getProfile,
-  //   { data: profileInfo, error: profileError, isLoading: isProfileLoading },
-  // ] = useLazyGetProfileQuery();
-
-  // useEffect(() => {
-  //   getProfile();
-  // }, []);
-
-  // console.log('Profile Info:', profileInfo);
 
   return (
     <Provider store={store}>

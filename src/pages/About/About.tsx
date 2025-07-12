@@ -41,7 +41,7 @@ const About: React.FC = () => {
     },
   ];
 
-  const { summary: userSummary } = userProfile.summary || {};
+  const userSummary = userProfile.summary;
 
   return (
     <section id='about' ref={elementRef} className='about section-padding'>
@@ -71,20 +71,20 @@ const About: React.FC = () => {
                 Building Digital Solutions
               </h3>
               <HtmlContentViewer
-                html={userSummary}
+                html={userSummary.summary || ''}
                 className='about__content-text'
               />
               <div className='about__content-stats'>
                 <div className='stat-item'>
-                  <h4>5+</h4>
+                  <h4>{userSummary.projectCompleted}</h4>
                   <span>Projects Completed</span>
                 </div>
                 <div className='stat-item'>
-                  <h4>10+</h4>
+                  <h4>{userSummary.experience}</h4>
                   <span>Years Experience</span>
                 </div>
                 <div className='stat-item'>
-                  <h4>5+</h4>
+                  <h4>{userSummary.happyClients}</h4>
                   <span>Happy Clients</span>
                 </div>
               </div>

@@ -15,6 +15,9 @@ export const initialProfileState: UserProfileState = {
         lastName: '',
         objective: '',
         summary: '',
+        projectCompleted: '',
+        experience: '',
+        happyClients: '',
       },
       skillCategories: [
         {

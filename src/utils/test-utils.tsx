@@ -1,14 +1,20 @@
 /* eslint-disable import/export */
-import { render } from '@testing-library/react'
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { store } from 'core/store/configureStore';
+import { ReactElement } from 'react';
+import { getStore } from 'core/store/configureStore';
+import { MockState } from 'core/base/test';
 
-const customRender = (ui: React.ReactElement, options = {}) =>
+const customRender = (ui: ReactElement, state = {}) =>
   render(ui, {
-    // wrap provider(s) here if needed
-    wrapper: ({ children }) => children,
-    ...options,
-  })
+    wrapper: ({ children }) => {
+      const mockState = { ...MockState, ...state };
+      return <Provider store={getStore(mockState)}>{children}</Provider>;
+    },
+  });
 
-export * from '@testing-library/react'
-export { default as userEvent } from '@testing-library/user-event'
+export * from '@testing-library/react';
+export { default as userEvent } from '@testing-library/user-event';
 // override render export
-export { customRender as render }
+export { customRender as render };

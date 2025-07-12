@@ -31,6 +31,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
 
   const formatDate = (date: string | Date) => {
     let dateObj: Date;
+    console.log(typeof date);
     if (typeof date === 'string') {
       // Handles "01-01-2022" as "DD-MM-YYYY"
       if (/^\d{2}-\d{2}-\d{4}$/.test(date)) {
@@ -48,34 +49,34 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
     return `${day}-${month}-${year}`;
   };
 
-  const getTechBadgeColor = (tech: string) => {
-    const lowerTech = tech.toLowerCase();
-    if (
-      ['react', 'javascript', 'typescript', 'html', 'css'].includes(lowerTech)
-    ) {
-      return 'primary';
-    }
-    if (['redux', 'saga', 'rtk query'].includes(lowerTech)) {
-      return 'info';
-    }
-    if (['jest', 'react testing library'].includes(lowerTech)) {
-      return 'success';
-    }
-    if (['.net core', 'swagger', 'azure devops'].includes(lowerTech)) {
-      return 'warning';
-    }
-    if (['sass', 'formik'].includes(lowerTech)) {
-      return 'secondary';
-    }
-    return 'outline-dark';
-  };
+  // const getTechBadgeColor = (tech: string) => {
+  //   const lowerTech = tech.toLowerCase();
+  //   if (
+  //     ['react', 'javascript', 'typescript', 'html', 'css'].includes(lowerTech)
+  //   ) {
+  //     return 'primary';
+  //   }
+  //   if (['redux', 'saga', 'rtk query'].includes(lowerTech)) {
+  //     return 'info';
+  //   }
+  //   if (['jest', 'react testing library'].includes(lowerTech)) {
+  //     return 'success';
+  //   }
+  //   if (['.net core', 'swagger', 'azure devops'].includes(lowerTech)) {
+  //     return 'warning';
+  //   }
+  //   if (['sass', 'formik'].includes(lowerTech)) {
+  //     return 'secondary';
+  //   }
+  //   return 'outline-dark';
+  // };
 
-  const getToolBadgeColor = (tool: string) => {
-    const lowerTool = tool.toLowerCase();
-    if (['figma'].includes(lowerTool)) return 'danger';
-    if (['jira'].includes(lowerTool)) return 'info';
-    return 'outline-primary';
-  };
+  // const getToolBadgeColor = (tool: string) => {
+  //   const lowerTool = tool.toLowerCase();
+  //   if (['figma'].includes(lowerTool)) return 'danger';
+  //   if (['jira'].includes(lowerTool)) return 'info';
+  //   return 'outline-primary';
+  // };
 
   const modalVariants = {
     hidden: {

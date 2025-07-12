@@ -1,16 +1,59 @@
-import { describe, expect, it } from 'vitest'
-import App from './App'
-import { render, screen, userEvent } from './utils/test-utils'
+import App from './App';
+import { render, screen } from '@/utils/test-utils';
 
-describe('Simple working test', () => {
-  it('the title is visible', () => {
-    render(<App />)
-    expect(screen.getByText(/Hello Vite \+ React!/i)).toBeInTheDocument()
-  })
+beforeAll(() => {
+  // Mock IntersectionObserver
+  class IntersectionObserverMock {
+    constructor() {}
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  }
+  // @ts-ignore
+  global.IntersectionObserver = IntersectionObserverMock;
 
-  it('should increment count on click', async() => {
-    render(<App />)
-    userEvent.click(screen.getByRole('button'))
-    expect(await screen.findByText(/count is: 1/i)).toBeInTheDocument()
-  })
-})
+  // Mock window.matchMedia
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: (query: string) => ({
+      matches: query.includes('dark'),
+      media: query,
+      onchange: null,
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+      dispatchEvent: vi.fn(),
+    }),
+  });
+});
+
+describe('App component test cases', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    document.documentElement.removeAttribute('data-theme');
+  });
+
+  it('Renders main sections', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'About Me' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Skills & Expertise' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Work Experience' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Completed Projects' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Featured Projects' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Get In Touch' })
+    ).toBeInTheDocument();
+  });
+});

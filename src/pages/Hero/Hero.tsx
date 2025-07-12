@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.8, delay: 1 }}
               >
                 <a
-                  href='https://github.com'
+                  href='https://github.com/cloudtecki'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='social-link'
@@ -106,14 +106,17 @@ const Hero: React.FC = () => {
                   <Github size={24} />
                 </a>
                 <a
-                  href='https://linkedin.com'
+                  href='https://linkedin.com/in/karthick-s-8732b379'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='social-link'
                 >
                   <Linkedin size={24} />
                 </a>
-                <a href='mailto:john@example.com' className='social-link'>
+                <a
+                  href='mailto:karthick.sprp18@gmail.com'
+                  className='social-link'
+                >
                   <Mail size={24} />
                 </a>
               </motion.div>

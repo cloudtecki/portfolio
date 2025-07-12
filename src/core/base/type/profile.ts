@@ -17,8 +17,8 @@ export interface IProject {
   isFeatured: boolean;
   title: string;
   description: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: Date | string;
+  endDate: Date | string;
   teamSize: number;
   image?: string;
   role: string;
@@ -79,6 +79,9 @@ export interface ISummaryFormValues {
   lastName: string;
   objective: string;
   summary: string;
+  projectCompleted: string;
+  experience: string;
+  happyClients: string;
 }
 
 export interface IProfile {
